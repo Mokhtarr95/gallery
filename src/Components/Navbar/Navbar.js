@@ -21,7 +21,7 @@ function Navbar() {
           </li>
           <Search />
           <li className="saves">
-            <a href="#">My Saves</a>
+            <Link to="/cart">My Saves</Link>
           </li>
         </ul>
       </nav>

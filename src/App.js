@@ -5,6 +5,8 @@ import Wedding from "./Components/Categories/Wedding";
 import Fashion from "./Components/Categories/Fashion";
 import Portrait from "./Components/Categories/Portrait";
 import Nature from "./Components/Categories/Nature";
+import Cart from "./Components/cart/cart";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
           <Route path="/fashion" component={Fashion} />
           <Route path="/portrait" component={Portrait} />
           <Route path="/nature" component={Nature} />
-
+          <Route path="/cart" component={Cart} />
           <ImagesList />
         </Switch>
       </Router>
