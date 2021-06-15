@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ImagesList from "./Components/ImagesList/ImagesList";
+import Navbar from "./Components/Navbar/Navbar";
+import Food from "./Components/Categories/Food";
+import Wedding from "./Components/Categories/Wedding";
+import Fashion from "./Components/Categories/Fashion";
+import Portrait from "./Components/Categories/Portrait";
+import Nature from "./Components/Categories/Nature";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={ImagesList} />
+          <Route path="/food" component={Food} />
+          <Route path="/wedding" component={Wedding} />
+          <Route path="/fashion" component={Fashion} />
+          <Route path="/portrait" component={Portrait} />
+          <Route path="/nature" component={Nature} />
+
+          <ImagesList />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
