@@ -1,0 +1,35 @@
+.search-box {
+  display: flex;
+  margin-left: 200px;
+  position: relative;
+  width: 60vh;
+  padding-left: 70px;
+}
+
+.searchInput {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 40px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  height: 35px;
+  position: relative;
+}
+
+.searchInput:focus {
+  border-color: cadetblue;
+  box-shadow: 0 0 8px 0 cadetblue;
+}
+
+.search-btn {
+  position: absolute;
+  border: none;
+  background: none;
+  color: black;
+  top: 15px;
+  right: 8px;
+  cursor: pointer;
+}
