@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "./Images.css";
 import { Modal } from "react-responsive-modal";
-
+import {addToFavorites} from '../../Redux/Actions';
+import imagesContainer from '../imagesContainer/imagesContainer';
 const Images = () => {
   const images = useSelector((state) => state.allImages.images);
 
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
 
   const onOpenModal = (imageSrc) => {
     setCurrentImage(imageSrc);
@@ -15,10 +17,14 @@ const Images = () => {
   };
   const onCloseModal = () => setOpen(false);
   const [currentImage, setCurrentImage] = useState("");
-
+  const savetoCart = (id) => {
+    dispatch(addToFavorites(id));
+  }
   return (
     <>
       <div className="img-container">
+
+        <imagesContainer images={images} ></imagesContainer>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 5 }}>
           <Masonry columnsCount={5} gutter={"15px"}>
             {images.map((image) => (
@@ -30,7 +36,7 @@ const Images = () => {
                   key={image.id}
                   alt=""
                 />
-                <button>Save</button>
+                <button onClick={() => savetoCart(image.id)}>Save</button>
               </div>
             ))}
           </Masonry>
