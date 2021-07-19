@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #060b26;
+  background-color: #eeeee4;
   height: 60px;
   display: flex;
   justify-content: start;
@@ -15,7 +15,7 @@
 .navbar li a {
   text-decoration: none;
   padding-left: 50px;
-  color: crimson;
+  color: #181817;
   font-weight: 800;
 }
 
@@ -30,14 +30,14 @@ ul {
 }
 
 .menu-bars {
-  margin-left: 2rem;
+  margin-left: 40px;
   font-size: 2rem;
   background: none;
-  color: #f5f5f5;
+  color: #181817;
 }
 
 .nav-menu {
-  background-color: #060b26;
+  background-color: #eeeee4;
   width: 200px;
   height: 100vh;
   display: flex;
@@ -64,7 +64,7 @@ ul {
 
 .nav-text a {
   text-decoration: none;
-  color: #f5f5f5;
+  color: #181817;
   font-size: 18px;
   width: 95%;
   height: 100%;
@@ -75,7 +75,12 @@ ul {
 }
 
 .nav-text a:hover {
-  background-color: #1a83ff;
+  background-color: #a7a7a0;
+}
+
+h2 {
+  font-size: 25px;
+  margin-left: 16px;
 }
 
 .nav-menu-items {
@@ -83,7 +88,7 @@ ul {
 }
 
 .navbar-toggle {
-  background-color: #060b26;
+  background-color: #eeeee4;
   width: 100%;
   display: flex;
   justify-content: start;
@@ -92,4 +97,44 @@ ul {
 
 span {
   margin-left: 16px;
+}
+
+@media screen and (max-width: 901px) {
+  .saves {
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .saves {
+    padding-right: 20px;
+  }
+
+  .navbar li a {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .saves {
+    padding-right: 15px;
+  }
+
+  .navbar li a {
+    padding-left: 5%;
+  }
+
+  .menu-bars {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .menu-bars {
+    margin-left: 5%;
+  }
+
+  .saves {
+    padding-right: 5px;
+  }
 }

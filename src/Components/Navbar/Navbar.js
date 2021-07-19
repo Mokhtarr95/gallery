@@ -21,7 +21,7 @@ function Navbar() {
           </li>
           <Search />
           <li className="saves">
-            <Link to="/cart">My Saves</Link>
+            <Link to="/cart">Saves</Link>
           </li>
         </ul>
       </nav>
@@ -32,6 +32,7 @@ function Navbar() {
               <AiIcons.AiOutlineClose size="1.5rem" />
             </Link>
           </li>
+          <h2>Categories</h2>
           <li className="nav-text">
             <Link to="/fashion">
               <span>Fashion</span>
