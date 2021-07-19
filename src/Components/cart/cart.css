@@ -1,0 +1,31 @@
+.img-container {
+  margin: 20px 30px 0 30px;
+}
+
+.delete-btn {
+  width: 100%;
+  display: block;
+  bottom: 7px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  justify-content: space-evenly;
+  color: red;
+  height: 23px;
+  border-radius: 10px;
+  transition: 0.25s;
+  background-color: black;
+  color: #ffffff;
+  font-weight: 800 bolder;
+  cursor: pointer;
+  margin: auto;
+  height: 40px;
+  font-size: 20px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 15px;
+  min-height: 250px;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
