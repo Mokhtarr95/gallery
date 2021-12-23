@@ -1,13 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Categories.css";
 import axios from "axios";
 import { setImages } from "../../Redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { Modal } from "react-responsive-modal";
 
 function Fashion() {
   const images = useSelector((state) => state.allImages.images);
   let dispatch = useDispatch();
+
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = (imageSrc) => {
+    setCurrentImage(imageSrc);
+    setOpen(true);
+  };
+  const onCloseModal = () => setOpen(false);
+  const [currentImage, setCurrentImage] = useState("");
 
   const fashionImages = () => {
     axios
@@ -30,7 +40,7 @@ function Fashion() {
 
   return (
     <>
-      <h1>Fashion Images</h1>
+      <h1 className="Title">Fashion Images</h1>
 
       <div className="img-container">
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 5 }}>
@@ -40,15 +50,28 @@ function Fashion() {
                 <img
                   className="image"
                   src={image.urls.thumb}
+                  onClick={() => onOpenModal(image.urls.thumb)}
                   key={image.id}
                   alt=""
                 />
-                <button>Save</button>
+                <button className="save-btn">Save</button>
               </div>
             ))}
           </Masonry>
         </ResponsiveMasonry>
       </div>
+
+      <Modal open={open} onClose={onCloseModal} center>
+        <img
+          src={currentImage}
+          alt=""
+          style={{
+            width: "100%",
+            borderRadius: "15px",
+            minHeight: "225px",
+          }}
+        />
+      </Modal>
     </>
   );
 }

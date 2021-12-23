@@ -3,7 +3,6 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { setImages } from "../../Redux/Actions";
 import Images from "../Images/Images";
-import Navbar from "../Navbar/Navbar";
 
 const ImagesList = () => {
   const images = useSelector((state) => state);
