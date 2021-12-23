@@ -2,13 +2,7 @@
   margin: 20px 30px 0 30px;
 }
 
-.image {
-  width: 100%;
-  border-radius: 15px;
-  min-height: 250px;
-}
-
-.save-btn {
+.delete-btn {
   width: 100%;
   display: block;
   bottom: 7px;
@@ -28,21 +22,10 @@
   font-size: 20px;
 }
 
-.Title {
-  margin-left: 3%;
-}
-
-@media screen and (max-width: 501px) {
-  .Title {
-    margin-left: 6%;
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  .Title {
-    display: flex;
-    justify-content: center;
-    font-size: 22px;
-  }
+.image {
+  width: 100%;
+  border-radius: 15px;
+  min-height: 250px;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }

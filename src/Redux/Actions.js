@@ -13,3 +13,10 @@ export const addToFavorites = (id) => {
     payload: id,
   };
 };
+
+export const removeFromFavorites = (id) => {
+  return {
+    type: ActionTypes.REMOVE_FROM_FAVORITES,
+    payload: id,
+  };
+};
